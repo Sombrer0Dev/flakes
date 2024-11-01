@@ -8,6 +8,9 @@ pkgs.mkShell {
     python
     venvShellHook
     numpy
+    pkgs.ruff
+    jedi-language-server
+    pkgs.semgrep
   ];
   venvDir = "./venv";
   postVenvCreation = ''
