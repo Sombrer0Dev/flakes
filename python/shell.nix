@@ -6,20 +6,19 @@ in
 pkgs.mkShell {
   buildInputs = with pythonPackages; [
     python
-    venvShellHook
+    # venvShellHook
     numpy
-    pkgs.ruff
+    pkgs.uv
     jedi-language-server
-    pkgs.semgrep
   ];
-  venvDir = "./venv";
+  # venvDir = "./venv";
   LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [
     pkgs.stdenv.cc.cc
   ];
-  postVenvCreation = ''
-    unset SOURCE_DATE_EPOCH
-  '';
-  postShellHook = ''
-    unset SOURCE_DATE_EPOCH
-  '';
+  # postVenvCreation = ''
+  #   unset SOURCE_DATE_EPOCH
+  # '';
+  # postShellHook = ''
+  #   unset SOURCE_DATE_EPOCH
+  # '';
 }
