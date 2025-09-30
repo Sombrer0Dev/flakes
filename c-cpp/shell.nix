@@ -2,7 +2,9 @@
 pkgs.mkShell {
   buildInputs = with pkgs; [
     clang-tools
+    clang
     cmake
+    bear
     codespell
     conan
     cppcheck
