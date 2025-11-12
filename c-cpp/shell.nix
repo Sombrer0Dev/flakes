@@ -3,6 +3,7 @@ pkgs.mkShell {
   buildInputs = with pkgs; [
     clang-tools
     clang
+    lldb
     cmake
     bear
     codespell
