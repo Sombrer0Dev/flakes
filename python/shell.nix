@@ -1,11 +1,11 @@
 { pkgs, ... }:
 
 let
-  pythonPackages = pkgs.python314Packages;
+  pythonPackages = pkgs.python312Packages;
 in
 pkgs.mkShell {
   buildInputs = with pythonPackages; [
-    pkgs.python314
+    pkgs.python312
     venvShellHook
   ];
   venvDir = "./.venv";
